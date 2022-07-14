@@ -15,7 +15,7 @@ public class Main {
     for (int i = 0; i < soLuongCPU; i++) {
       luongCPU[i] = new Thread(new hamTimSoNguyenTo(i));
       luongCPU[i].start();
-    }
+    } 
 
     // Chờ đợi tất cả các luồng đều hoàn tất
     for (int i = 0; i < soLuongCPU; i++)

@@ -1,0 +1,15 @@
+/home/lamminhthien/Code/TriTueNhanTao/TroChoiBocSoi/bin/Debug/net6.0/TroChoiBocSoi
+/home/lamminhthien/Code/TriTueNhanTao/TroChoiBocSoi/bin/Debug/net6.0/TroChoiBocSoi.deps.json
+/home/lamminhthien/Code/TriTueNhanTao/TroChoiBocSoi/bin/Debug/net6.0/TroChoiBocSoi.runtimeconfig.json
+/home/lamminhthien/Code/TriTueNhanTao/TroChoiBocSoi/bin/Debug/net6.0/TroChoiBocSoi.dll
+/home/lamminhthien/Code/TriTueNhanTao/TroChoiBocSoi/bin/Debug/net6.0/TroChoiBocSoi.pdb
+/home/lamminhthien/Code/TriTueNhanTao/TroChoiBocSoi/obj/Debug/net6.0/TroChoiBocSoi.csproj.AssemblyReference.cache
+/home/lamminhthien/Code/TriTueNhanTao/TroChoiBocSoi/obj/Debug/net6.0/TroChoiBocSoi.GeneratedMSBuildEditorConfig.editorconfig
+/home/lamminhthien/Code/TriTueNhanTao/TroChoiBocSoi/obj/Debug/net6.0/TroChoiBocSoi.AssemblyInfoInputs.cache
+/home/lamminhthien/Code/TriTueNhanTao/TroChoiBocSoi/obj/Debug/net6.0/TroChoiBocSoi.AssemblyInfo.cs
+/home/lamminhthien/Code/TriTueNhanTao/TroChoiBocSoi/obj/Debug/net6.0/TroChoiBocSoi.csproj.CoreCompileInputs.cache
+/home/lamminhthien/Code/TriTueNhanTao/TroChoiBocSoi/obj/Debug/net6.0/TroChoiBocSoi.dll
+/home/lamminhthien/Code/TriTueNhanTao/TroChoiBocSoi/obj/Debug/net6.0/refint/TroChoiBocSoi.dll
+/home/lamminhthien/Code/TriTueNhanTao/TroChoiBocSoi/obj/Debug/net6.0/TroChoiBocSoi.pdb
+/home/lamminhthien/Code/TriTueNhanTao/TroChoiBocSoi/obj/Debug/net6.0/TroChoiBocSoi.genruntimeconfig.cache
+/home/lamminhthien/Code/TriTueNhanTao/TroChoiBocSoi/obj/Debug/net6.0/ref/TroChoiBocSoi.dll

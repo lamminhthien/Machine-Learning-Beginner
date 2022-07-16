@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -7,18 +8,35 @@
   <title>8 quân hậu mô phỏng kết</title>
   <style>
     body {
-      background: beige
-      ;
+      background: beige;
     }
-  </style>
-  <script src="index.js">
-  </script>
-</head>
-<body>
 
-  <h1>Mô phỏng kết quả</h1>
-  <div class="chess-board">
-    
-  </div>
-</body>
+    .chess_board {
+      content: "";
+      display: flex;
+      flex-flow: wrap;
+      width: calc(50px*8);
+      background-color: aliceblue;
+    }
+
+    .dark_rect {
+      width: 50px;
+      height: 50px;
+      background-color: rgb(255, 0, 0);
+    }
+
+    .light_rect {
+      width: 50px;
+      height: 50px;
+      background-color: rgb(250, 194, 194);
+    }
+
+  </style>
+</head>
+
+  <body>
+    <h1>Mô phỏng kết quả</h1>
+    <div class="chess_board"></div>
+  </body>
+<script src="index.js"></script>
 </html>

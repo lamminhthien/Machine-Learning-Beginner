@@ -1,3 +1,4 @@
+from os.path import exists
 ## Chú thích
 # i là số thứ tự của hàng, j là số thứ tự của cột
 
@@ -14,7 +15,9 @@ def Xuat(n):
   # In ra một kết quả
   for i in range(1,n+1):
     print(f'{a[i]}',end = " ")
+    f.write(f'{a[i]}')
   print('\n')
+  f.write('\n')
 
 def Try(i,n):
   for j in range(1,n+1):
@@ -28,4 +31,6 @@ def Try(i,n):
       Try(i+1,n)
 
 n = 8 # Ở đây mình cho bài toán là 8 quân hậu trên bàn 8*8
+# Ghi dữ liệu vào file để render lên html
+f = open("result.txt","w")
 Try(1,n)

@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>8 quân hậu mô phỏng kết</title>
+  <style>
+    body {
+      background: beige
+      ;
+    }
+  </style>
+  <script>
+    var fr = new FileReader()
+    fr.onload = function(){
+      document.querySelector(".raw").textContent = fr.result
+    }
+    fr.readF("result.txt")
+
+  </script>
+</head>
+<body>
+
+  <h1>Mô phỏng kết quả</h1>
+  <pre class="raw">
+
+  </pre>
+</body>
+</html>

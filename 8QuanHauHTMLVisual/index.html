@@ -7,15 +7,19 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>8 quân hậu mô phỏng kết</title>
   <style>
-    body {
-      background: beige;
+    h1 {
+      font-size: xx-large;
+      font-weight: 700;
+      color: white;
     }
-
+    body {
+      background: linear-gradient(90deg, #0700b8 0%, #00ff88 100%);
+    }
     .chess_board_list {
       display: flex;
       flex-flow: wrap;
-      gap: 30px;
-      width: calc((50px*8) + (30*2));
+      gap: 50px;
+      width: calc((50px*8) + (50*2));
     }
 
     .chess_board {
@@ -23,19 +27,18 @@
       display: flex;
       flex-flow: wrap;
       width: calc(50px*8);
-      background-color: aliceblue;
     }
 
     .dark_rect {
       width: 50px;
       height: 50px;
-      background-color: rgb(255, 0, 0);
+      background-color: #86A666;
     }
 
     .light_rect {
       width: 50px;
       height: 50px;
-      background-color: rgb(250, 194, 194);
+      background-color: #FFFFDD;
     }
 
     .queen {

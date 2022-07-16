@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "/home/lamminhthien/Code/TriTueNhanTao/TroChoiBocSoi/TroChoiBocSoi.csproj": {}
+    "/home/lamminhthien/Code/TriTueNhanTao/TroChoiBocSoi_TimKetQua/TroChoiBocSoi.csproj": {}
   },
   "projects": {
-    "/home/lamminhthien/Code/TriTueNhanTao/TroChoiBocSoi/TroChoiBocSoi.csproj": {
+    "/home/lamminhthien/Code/TriTueNhanTao/TroChoiBocSoi_TimKetQua/TroChoiBocSoi.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "/home/lamminhthien/Code/TriTueNhanTao/TroChoiBocSoi/TroChoiBocSoi.csproj",
+        "projectUniqueName": "/home/lamminhthien/Code/TriTueNhanTao/TroChoiBocSoi_TimKetQua/TroChoiBocSoi.csproj",
         "projectName": "TroChoiBocSoi",
-        "projectPath": "/home/lamminhthien/Code/TriTueNhanTao/TroChoiBocSoi/TroChoiBocSoi.csproj",
+        "projectPath": "/home/lamminhthien/Code/TriTueNhanTao/TroChoiBocSoi_TimKetQua/TroChoiBocSoi.csproj",
         "packagesPath": "/home/lamminhthien/.nuget/packages/",
-        "outputPath": "/home/lamminhthien/Code/TriTueNhanTao/TroChoiBocSoi/obj/",
+        "outputPath": "/home/lamminhthien/Code/TriTueNhanTao/TroChoiBocSoi_TimKetQua/obj/",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "/home/lamminhthien/.nuget/NuGet/NuGet.Config"

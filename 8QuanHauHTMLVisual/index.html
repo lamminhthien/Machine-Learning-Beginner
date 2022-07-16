@@ -11,6 +11,12 @@
       background: beige;
     }
 
+    .chess_board_list {
+      display: flex;
+      flex-flow: wrap;
+      gap: 12px;
+      width: calc((50px*8) + (12*2));
+    }
     .chess_board {
       content: "";
       display: flex;
@@ -36,7 +42,9 @@
 
   <body>
     <h1>Mô phỏng kết quả</h1>
-    <div class="chess_board"></div>
+    <div class="chess_board_list">
+      
+    </div>
   </body>
 <script src="index.js"></script>
 </html>

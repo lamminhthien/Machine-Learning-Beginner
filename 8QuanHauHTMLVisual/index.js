@@ -1,4 +1,5 @@
 var currentPath = window.location.pathname;
+var chessBoardList = document.querySelector(".chess_board_list")
 currentPath = currentPath.replace("index.html", "result.txt")
 console.log(currentPath);
 
@@ -17,7 +18,8 @@ async function fetchText () {
   })
 }
 
-function placeQueen (data, parentChessBoard) {
+function placeQueen (data) {
+  createChessBoard()
   for (let i = 0; i < 8; i++) {
     var rowGraphicsSimulator = ''
     for (let j = 1; j <= 8; j++) {
@@ -30,20 +32,20 @@ function placeQueen (data, parentChessBoard) {
 }
 
 function createChessBoard () {
-  var parentChessBoard = document.querySelector(".chess_board")
+  var newChessBoardDiv = document.createElement('div')
+  newChessBoardDiv.className = "chess_board"
+  // var parentChessBoard = document.querySelector(".chess_board")
   for (let i = 1; i <= 8; i++) {
     for (let j = 1; j <= 8; j++) {
       var childRectBoard = document.createElement('div')
       if ((i - j) % 2 == 0) {
         childRectBoard.className = "light_rect"
       } else childRectBoard.className = "dark_rect"
-      parentChessBoard.appendChild(childRectBoard)
+      newChessBoardDiv.appendChild(childRectBoard)
     }
   }
-  console.log(parentChessBoard);
+  chessBoardList.appendChild(newChessBoardDiv)
 }
-
-
 
 // Create Chess Board HTML
 createChessBoard()

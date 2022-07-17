@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Trò chơi bốc sỏi</title>
+  <style>
+    .container {
+      padding-left: 10px;
+      padding-right: 10px;
+      padding-top: 300px;
+      display: flex;
+      gap: 20px;
+      flex-grow: calc(960px+20px);
+    }
+
+    .title {
+      text-align: center;
+      font-size: larger;
+      font-weight: 300;
+    }
+    .graphics-area {
+      width: 960px;
+      /* min-height: 1500px; */
+      display: flex;
+      flex-wrap: wrap;
+      gap: 10px;
+      background: rgb(252, 175, 175);
+    }
+
+    .player-area {
+      width: 960px;
+      background-color: cornsilk;
+    }
+
+    .input-area {
+      font-size: large;
+      font-style: normal;
+    }
+
+    label {
+      color: red;
+      font-size: larger;
+    }
+
+    .rock-block {
+      width: 50px;
+      height: 50px;
+      border: 1px;
+      border-radius: 999%;
+      background-color: blue;
+      animation-iteration-count: infinite;
+      transform-origin: bottom;
+      margin: 10px;
+    }
+
+    .bounce-1 {
+      animation-name: bounce-1;
+      animation-timing-function: linear;
+    }
+
+    @keyframes bounce-1 {
+      0% {
+        transform: translateY(0);
+      }
+
+      50% {
+        transform: translateY(-50px);
+      }
+
+      100% {
+        transform: translateY(0);
+      }
+    }
+  </style>
+</head>
+
+<body>
+  <div class="title">
+    <h1>Chào mừng bạn đến với trò chơi NIM</h1>
+  </div>
+  <div class="container">
+    <div class="graphics-area">
+    </div>
+    <div class="player-area">
+      <div class="input-area">
+        <label>Số lượng viên sỏi</label>
+        <input type="text" name="n" />
+      </div>
+      <div class="input-area">
+        <label>Số lượng viên bốc tối đa 1 lượt</label>
+        <input type="text" name="n" />
+      </div>
+      <div class="input-area">
+        <label>Số lượng viên còn lại: 5</label>
+      </div>
+      <div class="input-area">
+        <label>Lượt của người chơi thứ: 1</label>
+      </div>
+    </div>
+</body>
+<script>
+  // var n = parseInt(prompt("Mời bạn nhập số lượng viên sỏi (số lượng viên sỏi >=10 )"))
+  // var m = parseInt(prompt("Số lượng viên sỏi tối đa có thể lụm:"))
+  // alert(n)
+  // while (n <= 10 || isNaN(n)) {
+  //   var n = parseInt(prompt("Số lượng viên sỏi phải lớn hơn hoặc bằng 10"))
+  // }
+  // alert(`Số lượng viên sỏi là ${n} và số lượng tối đa có thê lụm là ${m}`)
+
+  //Create game item
+  // Tạo ra cho đủ số lượng viên sỏi
+  var graphicsArea = document.querySelector('.graphics-area')
+  var n = 20
+  for (let i = 0; i < n; i++) {
+    var rockBlock = document.createElement('div')
+    rockBlock.className = "rock-block bounce-1"
+    //Change time of animation for each rock
+    rockBlock.style.animationDuration = `${Math.random() * (3 - 2) + 2}s`;
+    randomRedColor = Math.random() * (255 - 0) + 0
+    randomBlueColor = Math.random() * (255 - 0) + 0
+    randomGreenColor = Math.random() * (255 - 0) + 0
+    rockBlock.style.backgroundColor = `rgb(${randomRedColor},${randomBlueColor},${randomGreenColor})`
+    graphicsArea.appendChild(rockBlock)
+  }
+
+
+</script>
+
+</html>

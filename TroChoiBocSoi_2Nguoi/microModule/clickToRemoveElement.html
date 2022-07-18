@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Trò chơi bốc sỏi</title>
+  <style>
+    .container {
+      padding-left: 10px;
+      padding-right: 10px;
+      gap: 20px;
+      flex-grow: calc(960px+20px);
+    }
+
+    .title {
+      text-align: center;
+      font-size: larger;
+      font-weight: 300;
+    }
+
+    .graphics-area {
+      /* min-height: 1500px; */
+      display: flex;
+      flex-wrap: wrap;
+      gap: 10px;
+      background: rgb(252, 175, 175);
+    }
+
+    .input-area {
+      font-size: large;
+      font-style: normal;
+    }
+
+    label {
+      color: red;
+      font-size: larger;
+    }
+
+    .rock-block {
+      width: 50px;
+      height: 50px;
+      border: 1px;
+      border-radius: 999%;
+      background-color: blue;
+      animation-iteration-count: infinite;
+      transform-origin: bottom;
+      margin: 10px;
+    }
+
+    .selected {
+      width: 50px;
+      height: 50px;
+      border: 1px;
+      border-radius: 999%;
+      animation-iteration-count: infinite;
+      transform-origin: bottom;
+      margin: 10px;
+      animation-name: bounce-1;
+      animation-timing-function: linear;
+    }
+
+    .bounce-1 {
+      animation-name: bounce-1;
+      animation-timing-function: linear;
+    }
+
+    .finish-turn {
+      background-color: #4CAF50;
+      /* Green */
+      border: none;
+      color: white;
+      padding: 15px 32px;
+      text-align: center;
+      text-decoration: none;
+      display: inline-block;
+      font-size: 16px;
+    }
+
+    @keyframes bounce-1 {
+      0% {
+        transform: translateY(0);
+      }
+
+      50% {
+        transform: translateY(-50px);
+      }
+
+      100% {
+        transform: translateY(0);
+      }
+    }
+
+  </style>
+</head>
+
+<body>
+  <div class="title">
+    <h1>Module click and counted </h1>
+    <h1>Lượt của <span id="namePlayer">A</span></h1>
+  </div>
+  <div class="container">
+    <div class="graphics-area">
+    </div>
+    <button class="finish-turn">Kết thúc lượt</button>
+</body>
+<script>
+  // Init number of block
+  var n = 30
+  var graphicsArea = document.querySelector('.graphics-area')
+  for (let i = 0; i < 30; i++) {
+    var rockBlock = document.createElement('div')
+    rockBlock.className = "rock-block bounce-1"
+    //Change time of animation for each rock
+    rockBlock.style.animationDuration = `${Math.random() * (3 - 2) + 2}s`;
+    randomRedColor = Math.random() * (255 - 0) + 0
+    randomBlueColor = Math.random() * (255 - 0) + 0
+    randomGreenColor = Math.random() * (255 - 0) + 0
+    rockBlock.style.backgroundColor = `rgb(${randomRedColor},${randomBlueColor},${randomGreenColor})`
+    rockBlock.addEventListener('click', function (e) {
+      e.target.style.backgroundImage = `radial-gradient(circle, red, yellow, green)`
+      const list = e.target.classList;
+      list.add("selected");
+      e.target.classList = list
+    })
+    graphicsArea.appendChild(rockBlock)
+  }
+  var finishTurnButton = document.querySelector('.finish-turn')
+  finishTurnButton.addEventListener('click', function (e) {
+    var selectedRockCount = document.querySelectorAll('div.rock-block.bounce-1.selected');
+    n = n - selectedRockCount.length;
+    selectedRockCount.forEach(item => item.remove())
+    var playerName = document.querySelector("#namePlayer")
+    alert(`Kết thúc lượt của ${playerName.textContent} còn lại ${n} viên đá`);
+    (playerName.textContent == 'A' ? playerName.textContent ='B' : playerName.textContent = 'A')
+  })
+
+</script>
+
+</html>

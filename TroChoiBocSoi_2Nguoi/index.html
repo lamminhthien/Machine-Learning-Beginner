@@ -21,6 +21,7 @@
       font-size: larger;
       font-weight: 300;
     }
+
     .graphics-area {
       width: 960px;
       /* min-height: 1500px; */
@@ -74,6 +75,7 @@
         transform: translateY(0);
       }
     }
+
   </style>
 </head>
 
@@ -86,35 +88,42 @@
     </div>
     <div class="player-area">
       <div class="input-area">
-        <label>Số lượng viên sỏi</label>
-        <input type="text" name="n" />
+        <label>Số lượng viên sỏi còn lại</label>
+        <input type="text" id="number" disabled />
       </div>
       <div class="input-area">
         <label>Số lượng viên bốc tối đa 1 lượt</label>
-        <input type="text" name="n" />
+        <input type="text" id="max" disabled />
       </div>
       <div class="input-area">
-        <label>Số lượng viên còn lại: 5</label>
+        <label>Số lượng viên còn lại</label>
+        <input type="text" id="remain" disabled />
       </div>
       <div class="input-area">
-        <label>Lượt của người chơi thứ: 1</label>
+        <label>Lượt của người chơi thứ: </label>
+        <input type="text" id="player" value="1" />
       </div>
     </div>
 </body>
 <script>
-  // var n = parseInt(prompt("Mời bạn nhập số lượng viên sỏi (số lượng viên sỏi >=10 )"))
-  // var m = parseInt(prompt("Số lượng viên sỏi tối đa có thể lụm:"))
-  // alert(n)
-  // while (n <= 10 || isNaN(n)) {
-  //   var n = parseInt(prompt("Số lượng viên sỏi phải lớn hơn hoặc bằng 10"))
-  // }
-  // alert(`Số lượng viên sỏi là ${n} và số lượng tối đa có thê lụm là ${m}`)
+  var number = parseInt(prompt("Mời bạn nhập số lượng viên sỏi (số lượng viên sỏi >=10 )"))
+  var max = parseInt(prompt("Số lượng viên sỏi tối đa có thể lụm:"))
+  while (number <= 10 || isNaN(number)) {
+    var number = parseInt(prompt("Số lượng viên sỏi phải lớn hơn hoặc bằng 10"))
+  }
+  alert(`Số lượng viên sỏi là ${number} và số lượng tối đa có thê lụm là ${max}`)
+  var remain = number
 
   //Create game item
-  // Tạo ra cho đủ số lượng viên sỏi
+  // Tạo ra cho đủ số lượng viên sỏi40
+
   var graphicsArea = document.querySelector('.graphics-area')
-  var n = 20
-  for (let i = 0; i < n; i++) {
+  var numberInput = document.getElementById('number')
+  var remainInput = document.getElementById("remain")
+  var maxInput = document.getElementById("max")
+  numberInput.value = number
+  maxInput.value = max
+  for (let i = 0; i < number; i++) {
     var rockBlock = document.createElement('div')
     rockBlock.className = "rock-block bounce-1"
     //Change time of animation for each rock
@@ -125,8 +134,20 @@
     rockBlock.style.backgroundColor = `rgb(${randomRedColor},${randomBlueColor},${randomGreenColor})`
     graphicsArea.appendChild(rockBlock)
   }
-
-
+  var playerName = document.getElementById('player')
+  setTimeout(() => {
+    console.log('Waiting for graphics render')
+  }, 5000)
+  var soVienBoc = parseInt(prompt(`Mời bạn thứ ${playerName.value} bốc sỏi:`))
+  // Bắt đầu trò chơi
+  while (soVienBoc > 1 || soVienBoc < 0) {
+    alert("Bạn bốc quá số viên hoặc bốc âm viên")
+    var soVienBoc = parseInt(prompt('Mời bạn bốc lại viên sỏi'))
+    // Cập nhật số lượng viên sỏi còn lại và cập nhật trên html
+    remain = remain - soVienBoc
+      // remainInput.value = remain
+      (playerName == 1 ? playerName = 0 : playerName = 1)
+  }
 </script>
 
 </html>

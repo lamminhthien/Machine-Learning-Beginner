@@ -1,0 +1,5 @@
+bài tập tuần 2 parallel,cuda
+dikjtra
+cộng 2 ma trận
+8 quân hậu
+

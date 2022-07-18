@@ -97,8 +97,10 @@
 
 <body>
   <div class="title">
-    <h1>Module click and counted </h1>
+    <h1>Trò chơi NIM</h1>
     <h1>Lượt của <span id="namePlayer">A</span></h1>
+    <h1>Số viên bi còn lại <span id="countRock"></span></h1>
+    <h1>Số viên bi tối đa trong 1 lần chọn <span id="maxRock"></span></h1>
   </div>
   <div class="container">
     <div class="graphics-area">
@@ -108,6 +110,10 @@
 <script>
   // Init number of block
   var n = 30
+  var m = 4
+  // Set number block and max block to html element
+  document.querySelector('#countRock').textContent = n
+  document.querySelector('#maxRock').textContent = m
   var graphicsArea = document.querySelector('.graphics-area')
   for (let i = 0; i < 30; i++) {
     var rockBlock = document.createElement('div')
@@ -129,11 +135,20 @@
   var finishTurnButton = document.querySelector('.finish-turn')
   finishTurnButton.addEventListener('click', function (e) {
     var selectedRockCount = document.querySelectorAll('div.rock-block.bounce-1.selected');
-    n = n - selectedRockCount.length;
-    selectedRockCount.forEach(item => item.remove())
-    var playerName = document.querySelector("#namePlayer")
-    alert(`Kết thúc lượt của ${playerName.textContent} còn lại ${n} viên đá`);
-    (playerName.textContent == 'A' ? playerName.textContent ='B' : playerName.textContent = 'A')
+    if (selectedRockCount <= m && n >= 2) {
+      n = n - selectedRockCount.length;
+      selectedRockCount.forEach(item => item.remove())
+      var playerName = document.querySelector("#namePlayer")
+      alert(`Kết thúc lượt của ${playerName.textContent} còn lại ${n} viên đá`);
+      (playerName.textContent == 'A' ? playerName.textContent = 'B' : playerName.textContent = 'A')
+      document.querySelector('#countRock').textContent = n
+    } else {
+      if (n==1) {
+        alert(`Người chơi ${playerName} thua`)
+      } else {
+        alert(`Số viên đá cần chọn phải nhỏ hơn hoặc bằng ${m}`)
+      }
+    }
   })
 
 </script>

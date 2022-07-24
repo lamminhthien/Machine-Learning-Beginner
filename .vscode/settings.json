@@ -2,5 +2,10 @@
   "java.project.sourcePaths": [
     "JavaApplet",
     "ParallelPrime"
-  ]
+  ],
+  "workbench.colorCustomizations": {
+    "activityBar.background": "#3F2728",
+    "titleBar.activeBackground": "#593738",
+    "titleBar.activeForeground": "#FCFAFA"
+  }
 }

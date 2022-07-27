@@ -1,4 +1,6 @@
 from os.path import exists
+from threading import Thread
+import threading
 ## Chú thích
 # i là số thứ tự của hàng, j là số thứ tự của cột
 

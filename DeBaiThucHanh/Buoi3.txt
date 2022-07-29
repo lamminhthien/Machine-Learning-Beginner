@@ -1,0 +1,7 @@
+<< C/C++ , Python , Java >>
+1.Cài đặt thuật toán vương hạo, Hợp giải robinson.
+3.Suy diễn tiến suy diễn lùi.
+4.Mạng ngữ nghĩa giải bài toán tam giác.
+5.Machine learning (Quinlan, mạng nơ ron, ANN (Neural networking)).
+6. Thực hành prolog bài con khỉ và nải chuối.
+<<<Upload bài lên elearning>>
